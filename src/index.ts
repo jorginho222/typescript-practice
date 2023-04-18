@@ -1,20 +1,29 @@
-// function calculateTax(income: number, taxYear: number = 2022): number {
-//     if (taxYear < 2022)
-//         return income * 1.2
-//     return income * 1.3
-// }
-//
-// calculateTax(10_000)
+type Supplier = {
+    readonly id: number,
+    address: string,
+    currentAccount: object,
+}
 
-// let employee: {
-//     readonly id: number,
-//     name: string,
-//     retire: (date: Date) => void
-// } = {
-//     id: 1,
-//     name: 'ricardo',
-//     retire: (date) => {
-//         console.log(date)
-//     }
-// }
+let employee1: Supplier = {
+    id: 1,
+    address: 'AV siempre viva 123',
+    currentAccount: {
+        id: 123,
+    }
+}
+let employee2: Supplier = {
+    id: 2,
+    address: 'falsa 123',
+    currentAccount: {
+        id: 456,
+    }
+}
+
+const employees: Supplier[] = [employee1, employee2]
+
+const getSuppliers = (): Supplier[] | void  => {
+    if (employees.length > 0) return employees
+}
+
+
 
